@@ -12,6 +12,15 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Fixed
 
+<!-- Released section -->
+<!-- Don't change this section unless doing release -->
+
+## [0.29.4] - 2026-10-30
+
+### Added
+
+### Fixed
+
 - TUI: long bash commands now wrap in full, with continuation lines aligned to
   the command. Wrapping follows the available width only, so command chains are
   no longer split after `&&`, `||` and pipes — that broke arguments mid-token
@@ -22,6 +31,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
   repeated short waits caused by guessing task durations.
 - Terminal: upgrade xui to v0.1.9 to correctly detect synchronized output,
   preventing input cursor flicker during animated redraws on supported terminals.
+- Models: IDs that pin a build with a four-digit suffix, such as
+  `deepseek-v4.1-flash-1017`, now match their preset instead of falling back to
+  generic defaults (no thinking, no context window, the default output limit).
 
 ## [0.29.3] - 2026-10-27
 
@@ -43,9 +55,6 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Fixed
 
-- Models: IDs that pin a build with a four-digit suffix, such as
-  `deepseek-v4.1-flash-1017`, now match their preset instead of falling back to
-  generic defaults (no thinking, no context window, the default output limit).
 - MCP: `tools/list` is followed across pages, so a server that splits its
   tools and returns `nextCursor` no longer loses every tool after the first
   page. Those tools used to be reported as "not found" by `read`, `write` and
@@ -895,9 +904,6 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-<!-- Released section -->
-<!-- Don't change this section unless doing release -->
-
 ## [0.25.1] - 2026-09-10
 
 ### Added
@@ -1329,7 +1335,8 @@ Earlier releases are available from GitHub tags only.
 
 <!-- Released section ended -->
 
-[Unreleased]: https://github.com/pulseaiclub/phi/compare/v0.29.3...HEAD
+[Unreleased]: https://github.com/pulseaiclub/phi/compare/v0.29.4...HEAD
+[0.29.4]: https://github.com/pulseaiclub/phi/releases/tag/v0.29.4
 [0.29.3]: https://github.com/pulseaiclub/phi/releases/tag/v0.29.3
 [0.29.2]: https://github.com/pulseaiclub/phi/releases/tag/v0.29.2
 [0.29.1]: https://github.com/pulseaiclub/phi/releases/tag/v0.29.1
